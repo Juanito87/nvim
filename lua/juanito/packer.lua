@@ -1,8 +1,6 @@
---builtin.find_files, {}) This file can be loaded by calling `lua require('plugins')` from your init.vim
-
 -- Package manager
 return require('packer').startup(function(use)
-  -- Packer can manage itself
+s  -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 -- fuzzy finder
 use {
@@ -12,14 +10,19 @@ use {
 }
 -- Color scheme
 use { "ellisonleao/gruvbox.nvim" }
+
 -- lsp (highligh, syntax, etc)
 use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+
 -- improve workflow for multiple files
 use('theprimeagen/harpoon')
+
 -- undo tree
 use('mbbill/undotree')
+
 -- git management
 use('tpope/vim-fugitive')
+
 -- lsp (language server protocol)
 use {
   'VonHeikemen/lsp-zero.nvim',
@@ -42,5 +45,7 @@ use {
     {'rafamadriz/friendly-snippets'},
   }
 }
+-- vim movements game
+use('ThePrimeagen/vim-be-good')
 -- End of config file
 end)
