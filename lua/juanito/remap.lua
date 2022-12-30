@@ -9,17 +9,16 @@ vim.keymap.set("n", "J", "mzJ`z") -- Marks the point (mz), joins the lines (J) a
 vim.keymap.set("n", "n", "nzzzv") -- n = next search, zz = center cursor on screen, zv = open fold if exist
 vim.keymap.set("n", "N", "Nzzzv") -- N = previous search, zz = center cursor on screen, zv = open fold if exist
 
--- Add additional undo breakpoints, makes undo more granular
---vim.keymap.set(
---inoremap , ,<c-g>u
---inoremap . .<c-g>u
---inoremap ! !<c-g>u
---inoremap ? ?<c-g>u
---
---" Moving text around
---vnoremap J :m '>+1<CR>gv=gv
---vnoremap K :m '>+1<CR>gv=gv
---inoremap <C-j> <esc>:m .+1<cr>==
---inoremap <C-k> <esc>:m .-2<cr>==
---nnoremap <leader>k :m .-2<CR>==
---nnoremap <leader>j :m .+1<CR>==
+-- Add additional undo breakpoints on these simbols, makes undo more granular
+vim.keymap.set("i", ",", ",<c-g>u") 
+vim.keymap.set("i", ".", ".<c-g>u") 
+vim.keymap.set("i", "!", "!<c-g>u") 
+vim.keymap.set("i", "?", "?<c-g>u") 
+
+-- Moving text around
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '>+1<CR>gv=gv")
+vim.keymap.set("i", "<C-k>", "<esc>:m .-2<cr>==") 
+vim.keymap.set("i", "<C-j>", "<esc>:m .+1<cr>==") 
+vim.keymap.set("n", "<leader>j", ":m .+1<CR>==") 
+vim.keymap.set("n", "<leader>k", ":m .-2<CR>==") 
