@@ -2,20 +2,27 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.ensure_installed({
---  'sumneko_lua',
+  'bashls',
+  'jsonls',
+  'ansiblels',
+  'yamlls',
+  'docker_compose_language_service',
+  'dockerls',
+  'gopls',
+  'luau_lsp',
   'rust_analyzer',
 })
 
 -- Fix Undefined global 'vim'
---lsp.configure('sumneko_lua', {
---    settings = {
---        Lua = {
---            diagnostics = {
---                globals = { 'vim' }
---            }
---        }
---    }
---})
+lsp.configure('luau_lsp', {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
+})
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
