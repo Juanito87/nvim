@@ -1,6 +1,6 @@
 -- Package manager
 return require('packer').startup(function(use)
-s  -- Packer can manage itself
+-- Packer can manage itself
   use 'wbthomason/packer.nvim'
 -- fuzzy finder
 use {
@@ -15,6 +15,7 @@ use { "ellisonleao/gruvbox.nvim" }
 use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
 -- improve workflow for multiple files
+-- mark files for quick access menu
 use('theprimeagen/harpoon')
 
 -- undo tree
