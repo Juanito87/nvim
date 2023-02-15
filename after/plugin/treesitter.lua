@@ -1,5 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
+  -- help is for vim help
   ensure_installed = { "lua", "rust", "help", "bash", "dockerfile", "go", "http", "json", "make", "markdown", "python", "regex", "yaml" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
