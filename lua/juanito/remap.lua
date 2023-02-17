@@ -4,11 +4,10 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) --opens netrw
 -- copy pasting
 vim.keymap.set("n", "Y", "y$") -- yanks till the end of the line, like C for change or D for delete
 vim.keymap.set("n", "J", "mzJ`z") -- Marks the point (mz), joins the lines (J) and gets back to the marked place (`z).
-vim.keymap.set("n", "<leader>y", "+y") -- Prefix y with leader to send to system clipboard
-vim.keymap.set("v", "<leader>y", "+y") -- Prefix y with leader to send to system clipboard
-vim.keymap.set("n", "<leader>Y", "+Y") -- Prefix y with leader to send to system clipboard
-vim.keymap.set("x", "<leader>p", "+p") -- deletes to void registry to avoid changing registry content
-vim.keymap.set("x", "<leader>P", "_dP") -- deletes to void registry to avoid changing registry content
+vim.keymap.set({"n","v"}, "<leader>y", "\"+y") -- Prefix y with leader to send to system clipboard
+vim.keymap.set({"n","v"}, "<leader>Y", "\"+Y") -- Prefix y with leader to send to system clipboard
+vim.keymap.set("x", "<leader>p", "\"+p") -- deletes to void registry to avoid changing registry content
+vim.keymap.set("x", "<leader>P", "\"_dP") -- deletes to void registry to avoid changing registry content
 
 -- search remaps
 vim.keymap.set("n", "n", "nzzzv") -- n = next search, zz = center cursor on screen, zv = open fold if exist

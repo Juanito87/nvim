@@ -27,3 +27,4 @@ vim.opt.signcolumn = "yes"
 
 --set misc
 vim.opt.termguicolors = true
+vim.o.completeopt = 'menuone,noselect' -- autocomplete options

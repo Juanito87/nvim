@@ -5,21 +5,20 @@ return require('packer').startup(function(use)
 -- fuzzy finder
 use {
   'nvim-telescope/telescope.nvim', tag = '0.1.0',
--- or                            , branch = '0.1.x',
   requires = { {'nvim-lua/plenary.nvim'} }
 }
+
 -- Color scheme
 use { "ellisonleao/gruvbox.nvim" }
 
--- lsp (highligh, syntax, etc)
+-- highligh, syntax, comments, etc
 use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+use ('numToStr/Comment.nvim') -- comments
+use ('mbbill/undotree') -- undo tree
 
 -- improve workflow for multiple files
 -- mark files for quick access menu
 use('theprimeagen/harpoon')
-
--- undo tree
-use('mbbill/undotree')
 
 -- git management
 use('tpope/vim-fugitive')
@@ -46,7 +45,18 @@ use {
     {'rafamadriz/friendly-snippets'},
   }
 }
+
+-- Code runner
+use { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+-- lua airline
+use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+}
+
 -- vim movements game
 use('ThePrimeagen/vim-be-good')
+
 -- End of config file
 end)

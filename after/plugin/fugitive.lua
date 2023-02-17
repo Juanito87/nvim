@@ -17,8 +17,8 @@ autocmd("BufWinEnter", {
         vim.keymap.set("n", "<leader>gc", function()
             vim.cmd.Git('commit')
         end) 
-        local opts = {buffer = bufnr, remap = false}
         vim.keymap.set("n", "<leader>p", function()
+            local opts = {buffer = bufnr, remap = false}
             vim.cmd.Git('push')
         end, opts)
 
@@ -29,6 +29,8 @@ autocmd("BufWinEnter", {
 
         -- NOTE: It allows me to easily set the branch i am pushing and any tracking
         -- needed if i did not set the branch up correctly
-        vim.keymap.set("n", "<leader>t", ":Git push -u origin ", opts);
+        vim.keymap.set("n", "<leader>t", ":Git push -u origin ", opts)
+        -- need to set modifiable on or open a new pane to display
+        --vim.keymap.set("n", "<leader>gd", "Git diff", opts)
     end,
 })
