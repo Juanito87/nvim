@@ -25,6 +25,11 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 
---set misc
+-- set spellcheck
+vim.opt.spell = true
+vim.opt.spelllang = { 'en', 'es' }
+vim.opt.syntax.spell = toplevel
+
+-- set misc
 vim.opt.termguicolors = true
 vim.o.completeopt = 'menuone,noselect' -- autocomplete options
