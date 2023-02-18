@@ -28,11 +28,6 @@ vim.keymap.set("n", "<leader>j", ":m .+1<CR>==") -- move line up in in normal mo
 vim.keymap.set("n", "<leader>k", ":m .-2<CR>==") -- move line down in in normal mode
 
 -- Window management
-vim.keymap.set("n", "<silent> <C-h>", "vim.cmd.WinMoveLeft")
-vim.keymap.set("n", "<silent> <C-j>", "vim.cmd.WinMoveDown")
-vim.keymap.set("n", "<silent> <C-k>", "vim.cmd.WinMoveUp")
-vim.keymap.set("n", "<silent> <C-l>", "vim.cmd.WinMoveRight")
 vim.keymap.set("n", "<C-C>", "<C-W><C-C>") -- close window with ctrl+c
 
 -- Testing remaps and functions
-

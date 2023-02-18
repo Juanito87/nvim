@@ -20,8 +20,10 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 -- set highlight and navigation
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+vim.opt.hlsearch = false -- Highlight partial search
+vim.opt.incsearch = true -- Incremental search to highlight partial matches
+vim.opt.ignorecase = true -- Do case insensitive matching
+vim.opt.smartcase = true -- Do smart case matching, ignorecase needs to be set
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 
@@ -30,6 +32,15 @@ vim.opt.spell = true
 vim.opt.spelllang = { 'en', 'es' }
 vim.opt.syntax.spell = toplevel
 
+
+-- set spliting config
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
+-- set folding
+vim.opt.foldmethod = 'syntax' -- Folding method used, according to syntax
+vim.opt.foldnestmax = 10 -- Set maximum nested foldings, up to 20
+
 -- set misc
 vim.opt.termguicolors = true
-vim.o.completeopt = 'menuone,noselect' -- autocomplete options
+vim.opt.completeopt = 'menuone,noselect' -- autocomplete options
