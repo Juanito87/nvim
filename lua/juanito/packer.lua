@@ -1,12 +1,16 @@
 -- Package manager
 return require('packer').startup(function(use)
+    
 -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+
 -- fuzzy finder
 use {
   'nvim-telescope/telescope.nvim', tag = '0.1.0',
+  'nvim-lua/popup.nvim',
   requires = { {'nvim-lua/plenary.nvim'} }
 }
+use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
 -- Color scheme
 use { "ellisonleao/gruvbox.nvim" }
@@ -22,6 +26,7 @@ use('theprimeagen/harpoon')
 
 -- git management
 use('tpope/vim-fugitive')
+use('ThePrimeagen/git-worktree.nvim')
 
 -- lsp (language server protocol)
 use {
