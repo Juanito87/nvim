@@ -10,9 +10,9 @@ vim.keymap.set('n', '<C-p>', builtin.git_files, {}) -- search in your current gi
 vim.keymap.set('n', '<leader>ps', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end) -- grep in path recursively
-vim.keymap.set('n', '<leader>mw', function()
+vim.keymap.set('n', '<leader>wm', function()
     require('telescope').extensions.git_worktree.git_worktrees() -- manage worktrees on telescope
 end)
-vim.keymap.set('n', '<leader>cw', function() 
+vim.keymap.set('n', '<leader>wc', function() 
     require('telescope').extensions.git_worktree.create_git_worktree() -- create worktree 
 end)

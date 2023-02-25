@@ -1,6 +1,7 @@
 -- set git status remap
 -- create buffer window to do more git commands
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+vim.keymap.set("n", "<C-g>d", ":Gdiffsplit<CR>")
 
 local juanito_Fugitive = vim.api.nvim_create_augroup("juanito_Fugitive", {})
 
@@ -30,7 +31,7 @@ autocmd("BufWinEnter", {
         -- NOTE: It allows me to easily set the branch i am pushing and any tracking
         -- needed if i did not set the branch up correctly
         vim.keymap.set("n", "<leader>t", ":Git push -u origin ", opts)
-        -- need to set modifiable on or open a new pane to display
-        --vim.keymap.set("n", "<leader>gd", "Git diff", opts)
+        -- to check commit diff
+        vim.keymap.set("n", "<leader>gd", "Git diff", opts)
     end,
 })
