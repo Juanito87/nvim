@@ -60,6 +60,15 @@ use {
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 }
 
+-- keymap reminder test
+use {
+  "folke/which-key.nvim",
+  config = function()
+    vim.o.timeout = true
+    vim.o.timeoutlen = 300
+    require("which-key").setup {}
+  end
+}
 -- vim movements game
 use('ThePrimeagen/vim-be-good')
 
