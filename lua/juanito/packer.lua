@@ -27,6 +27,7 @@ use('theprimeagen/harpoon')
 -- git management
 use('tpope/vim-fugitive')
 use('ThePrimeagen/git-worktree.nvim')
+use('github/copilot.vim')
 
 -- lsp (language server protocol)
 use {

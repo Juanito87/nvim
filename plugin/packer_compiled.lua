@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/juanito/.local/share/nvim/site/pack/packer/start/code_runner.nvim",
     url = "https://github.com/CRAG666/code_runner.nvim"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/home/juanito/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/juanito/.local/share/nvim/site/pack/packer/start/friendly-snippets",
