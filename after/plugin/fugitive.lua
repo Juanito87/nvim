@@ -1,5 +1,4 @@
 -- set git status remap
--- create buffer window to do more git commands
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 vim.keymap.set("n", "<C-g>vd", ":Gvdiffsplit<CR>")
 vim.keymap.set("n", "<C-g>hd", ":Gdiffsplit<CR>")
@@ -7,6 +6,7 @@ vim.keymap.set("n", "<leader>gb", ":Git blame<CR>")
 
 local juanito_Fugitive = vim.api.nvim_create_augroup("juanito_Fugitive", {})
 
+-- create buffer window to do more git commands
 local autocmd = vim.api.nvim_create_autocmd
 autocmd("BufWinEnter", {
     group = juanito_Fugitive,

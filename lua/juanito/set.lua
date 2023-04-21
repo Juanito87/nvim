@@ -32,7 +32,6 @@ vim.opt.spell = true
 vim.opt.spelllang = { 'en', 'es' }
 vim.opt.syntax.spell = toplevel
 
-
 -- set spliting config
 vim.opt.splitbelow = true
 vim.opt.splitright = true
@@ -44,3 +43,6 @@ vim.opt.foldnestmax = 10 -- Set maximum nested foldings, up to 20
 -- set misc
 vim.opt.termguicolors = true
 vim.opt.completeopt = 'menuone,noselect' -- autocomplete options
+
+-- set blammer
+vim.g.blamer_enabled = 1

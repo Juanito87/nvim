@@ -26,6 +26,8 @@ use('theprimeagen/harpoon')
 
 -- git management
 use('tpope/vim-fugitive')
+use('tpope/vim-sleuth')
+use('APZelos/blamer.nvim')
 use('ThePrimeagen/git-worktree.nvim')
 use('github/copilot.vim')
 
