@@ -39,3 +39,19 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
     vim.cmd("tabdo wincmd =")
   end,
 })
+
+-- remove auto comment next line
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  group = augroup("remove_auto_comment"),
+  callback = function()
+    vim.cmd("setlocal formatoptions-=c formatoptions-=r formatoptions-=o")
+  end,
+})
+
+-- set cursorline only in focused window
+vim.api.nvim_create_autocmd({ "WinEnter", "WinLeave" }, {
+  group = augroup("cursorline"),
+  callback = function()
+    vim.wo.cursorline = vim.fn.win_getid() == vim.fn.win_getid()
+  end,
+})

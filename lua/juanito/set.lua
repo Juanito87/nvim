@@ -46,3 +46,6 @@ vim.opt.completeopt = 'menuone,noselect' -- autocomplete options
 
 -- set blammer
 vim.g.blamer_enabled = 1
+
+-- set cursorline
+vim.wo.cursorline = true

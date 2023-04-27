@@ -2,8 +2,8 @@ require('code_runner').setup({
   -- put here the commands by filetype
   filetype = {
         go = "go run",
-		python = "python3 -u",
-		rust = "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt",
+	python = "python3 -u",
+	rust = "cd $dir && cargo run $fileName && $dir/$fileNameWithoutExt",
         sh = "bash"
 	},
 })
