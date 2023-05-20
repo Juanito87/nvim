@@ -29,7 +29,8 @@ use('tpope/vim-fugitive')
 use('tpope/vim-sleuth')
 use('APZelos/blamer.nvim')
 use('ThePrimeagen/git-worktree.nvim')
-use('github/copilot.vim')
+-- Commenting out copilot, not usefull enough to pay 10 a month.
+-- use('github/copilot.vim')
 
 -- lsp (language server protocol)
 use {
@@ -54,6 +55,9 @@ use {
   }
 }
 
+-- markdown visualizer
+use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
+
 -- Code runner
 use { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim' }
 
@@ -72,6 +76,11 @@ use {
     require("which-key").setup {}
   end
 }
+
+-- tools
+-- todo list
+use{"vuciv/vim-bujo"}
+
 -- vim movements game
 use('ThePrimeagen/vim-be-good')
 

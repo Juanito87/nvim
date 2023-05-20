@@ -30,4 +30,12 @@ vim.keymap.set("n", "<leader>k", ":m .-2<CR>==") -- move line down in in normal 
 -- Window management
 vim.keymap.set("n", "<C-C>", "<C-W><C-C>") -- close window with ctrl+c
 
+-- markdown preview
+vim.keymap.set("n", "<leader>mp", ":Glow<CR>") -- remap glow to show markdown preview
+vim.keymap.set("n", "<leader>mq", ":Glow!<CR>") -- remap glow to close markdown preview
+
+-- todo list
+vim.keymap.set("n", "<leader>t", ":abovetleft Todo //<CR>") -- map vim-bujo to open repo todo list
+vim.keymap.set("n", "<leader>T", ":abovetleft Todo g<CR>") -- map vim-bujo to open global todo list
+
 -- Testing remaps and functions
