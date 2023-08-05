@@ -35,7 +35,13 @@ vim.keymap.set("n", "<leader>mp", ":Glow<CR>") -- remap glow to show markdown pr
 vim.keymap.set("n", "<leader>mq", ":Glow!<CR>") -- remap glow to close markdown preview
 
 -- todo list
-vim.keymap.set("n", "<leader>t", ":abovetleft Todo //<CR>") -- map vim-bujo to open repo todo list
-vim.keymap.set("n", "<leader>T", ":abovetleft Todo g<CR>") -- map vim-bujo to open global todo list
+-- vim.keymap.set("n", "<leader>t", ":abovetleft Todo //<CR>") -- map vim-bujo to open repo todo list
+-- vim.keymap.set("n", "<leader>T", ":abovetleft Todo g<CR>") -- map vim-bujo to open global todo list
 
 -- Testing remaps and functions
+-- save file
+vim.keymap.set({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
+
+-- better indenting
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")

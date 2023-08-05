@@ -7,7 +7,7 @@ require('code_runner').setup({
         sh = "bash"
 	},
 })
--- require("harpoon.term").sendCommand(1, require("code_runner.commands").get_filetype_command() .. "\n")
+require("harpoon.term").sendCommand(1, require("code_runner.commands").get_filetype_command() .. "\n")
 
 -- Remaps
 vim.keymap.set('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = false })
