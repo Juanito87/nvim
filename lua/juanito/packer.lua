@@ -78,8 +78,8 @@ use {
 }
 
 -- tools
--- todo list
-use{"vuciv/vim-bujo"}
+-- todo list not in use, needs practice.
+-- use{"vuciv/vim-bujo"}
 
 -- vim movements game
 use('ThePrimeagen/vim-be-good')
