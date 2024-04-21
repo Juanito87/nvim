@@ -1,7 +1,7 @@
 -- requires
+require("juanito.packer")
 require("juanito.set")
 require("juanito.remap")
-require("juanito.packer")
 require("juanito.functions")
 
 -- set color scheme and transparency
