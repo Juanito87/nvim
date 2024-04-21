@@ -24,6 +24,7 @@ require('code_runner').setup({
 	python = "python3 -u",
 	rust = "cd $dir && cargo run $fileName && $dir/$fileNameWithoutExt",
         sh = "bash",
+	rs = "cargo run",
 	txt = ""
 	},
 })
