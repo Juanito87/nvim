@@ -14,6 +14,8 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 
 -- set file management options (undo plugin integration)
+vim.opt.filetype = on
+vim.opt.filetype.plugin = on
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
